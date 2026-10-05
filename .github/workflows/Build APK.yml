@@ -20,11 +20,15 @@ jobs:
       - name: Installer Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Activer AndroidX
+        run: printf "\nandroid.useAndroidX=true\n" >> gradle.properties
+
       - name: Rendre gradlew executable
         run: chmod +x ./gradlew
 
       - name: Compiler l'APK debug
-           run: ./gradlew assembleDebug -Pandroid.useAndroidX=true
+        run: ./gradlew assembleDebug
+
       - name: Publier l'APK
         uses: actions/upload-artifact@v4
         with:
