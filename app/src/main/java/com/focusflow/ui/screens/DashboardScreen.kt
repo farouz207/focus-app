@@ -73,7 +73,7 @@ fun DashboardScreen(
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text("Objectif quotidien", fontWeight = FontWeight.Bold, color = Color(0xFF111C2D))
                     LinearProgressIndicator(
-                        progress = { 0.76f },
+                        progress =  0.76f ,
                         modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp).height(8.dp).clip(CircleShape),
                         color = Color(0xFF0041C5),
                         trackColor = Color(0xFFD8E3FB)
